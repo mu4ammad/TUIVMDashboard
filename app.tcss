@@ -1,1 +1,119 @@
+/* app.tcss */
 
+/* Base styling for the entire application */
+Screen {
+    background: #282c34; /* Dark background */
+    color: #abb2bf; /* Light grey text */
+    padding: 1; /* Small padding around the whole screen */
+}
+
+/* Header and Footer styling */
+Header {
+    background: #61afef; /* Blue for header */
+    color: black;
+    text-align: center;
+    dock: top;
+    height: 3; /* Fixed height for header */
+    text-style: bold;
+}
+
+Footer {
+    background: #3e4451; /* Darker grey for footer */
+    color: #abb2bf;
+    dock: bottom;
+    height: 2; /* Fixed height for footer */
+    text-align: center;
+}
+
+/* Layout for main content panels */
+Horizontal {
+    height: 1fr; /* Takes up remaining vertical space */
+}
+
+#left-panel {
+    width: 30%; /* Left panel takes 30% of width */
+    height: 1fr;
+    border: thick #4b5263; /* Subtle border for the main side panel */
+    margin-right: 1; /* Space between panels */
+    background: #353b47;
+    padding: 1;
+}
+
+#right-panel {
+    width: 70%; /* Right panel takes 70% of width */
+    height: 1fr;
+    border: thick #4b5263; /* Subtle border for the main side panel */
+    background: #353b47;
+    padding: 1;
+}
+
+/* Styling for our functional containers - now with a simple border only */
+.functional-panel {
+    border: round #4b5263; /* This provides the border around each section */
+    padding: 1;
+    margin-bottom: 1; /* Space between panels in the same vertical scroll */
+    background: #3e4451; /* Slightly different background for the inner panels */
+}
+
+/* Titles for sections within panels (these are the Static widgets *inside* the containers) */
+.panel-title {
+    text-align: center;
+    text-style: bold underline;
+    margin-bottom: 1;
+    color: #c678dd; /* Purple for titles */
+    background: #282c34; /* Give the title a background */
+    padding: 0 1; /* Some padding around the title */
+}
+
+/* Buttons styling */
+Button {
+    width: 1fr; /* Full width within its container */
+    margin: 1 0; /* Vertical margin */
+    border: round #61afef; /* Rounded corners with blue border */
+}
+
+Button:hover {
+    background: #61afef;
+    color: black;
+}
+
+Button.primary {
+    background: #98c379; /* Green for primary actions */
+    color: black;
+}
+
+Button.primary:hover {
+    background: #7ca061;
+}
+
+Button.warning {
+    background: #e6c07b; /* Yellow for warning actions */
+    color: black;
+}
+
+Button.warning:hover {
+    background: #c29d60;
+}
+
+/* Input field styling for the terminal */
+Input {
+    height: 3; /* Taller input field */
+    background: #3e4451;
+    color: #abb2bf;
+    border: round #61afef;
+    padding: 0 1;
+    margin-bottom: 1;
+}
+
+Input:focus {
+    border: round #e06c75; /* Red border on focus */
+}
+
+/* RichLog styling for terminal output */
+#terminal-log {
+    height: 1fr; /* Takes remaining space */
+    background: #20232a; /* Darker background for log */
+    border: round #4b5263;
+    padding: 1;
+    overflow-y: scroll; /* Enable vertical scrollbar */
+}
